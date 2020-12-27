@@ -1,4 +1,4 @@
 #!/bin/sh
 
-ln -sf ~/dotfiles/.vimrc ~/.vimrc
-ln -sf ~/dotfiles/fish ~/.config/fish
+ln -sf ~/ghq/github.com/dotfiles/.vimrc ~/.vimrc
+ln -sf ~/ghq/github.com/dotfiles/fish ~/.config/fish

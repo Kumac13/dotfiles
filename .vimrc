@@ -3,7 +3,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'preservim/nerdtree'
 Plug 'arzg/vim-colors-xcode'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
@@ -17,9 +16,6 @@ call plug#end()
 
 "===== Look ===== 
 set number 
-
-" NERDTree
-nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
