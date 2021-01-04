@@ -68,4 +68,3 @@ let g:vim_markdown_folding_disabled = 1
 
 " ====== Command  ======
 command! Terminal call popup_create(term_start([&shell], #{ hidden: 1, term_finish: 'close'}), #{ border: [], minwidth: winwidth(0)/2, minheight: &lines/2 })
-
