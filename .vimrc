@@ -48,6 +48,12 @@ let g:indentLine_fileTypeExclude = ['help', 'markdown']
 inoremap <silent> jj <ESC>
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'  
 
+" Keymapping for unipaired.vim
+nnoremap <silent> [b :bprevious<CR>
+nnoremap <silent> ]b :bnext<CR>
+nnoremap <silent> [B :bfirst<CR>
+nnoremap <silent> ]B :blasst<CR>
+
 " Encoding
 set encoding=utf-8
 set fenc=utf-8
@@ -62,3 +68,4 @@ let g:vim_markdown_folding_disabled = 1
 
 " ====== Command  ======
 command! Terminal call popup_create(term_start([&shell], #{ hidden: 1, term_finish: 'close'}), #{ border: [], minwidth: winwidth(0)/2, minheight: &lines/2 })
+
