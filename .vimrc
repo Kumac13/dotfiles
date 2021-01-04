@@ -52,7 +52,7 @@ cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
 nnoremap <silent> [B :bfirst<CR>
-nnoremap <silent> ]B :blasst<CR>
+nnoremap <silent> ]B :blast<CR>
 
 " Encoding
 set encoding=utf-8
