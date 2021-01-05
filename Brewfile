@@ -7,6 +7,7 @@ brew "fzf"
 brew "ghq"
 brew "fish"
 brew "bat"
+brew "speedtest"
 
 cask "alfred"
 cask "google-chrome"
