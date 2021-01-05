@@ -65,6 +65,8 @@ let &t_EI.="\e[2 q"
 " Markdown
 let g:vim_markdown_new_list_item_indent=2
 let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_fenced_languages = ['csharp=cs'] " codeblockで別の言語を有効にする
+let g:vim_markdown_strikethrough = 1 " 取り消し線
 
 " ====== Command  ======
 command! Terminal call popup_create(term_start([&shell], #{ hidden: 1, term_finish: 'close'}), #{ border: [], minwidth: winwidth(0)/2, minheight: &lines/2 })
