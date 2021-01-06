@@ -7,7 +7,6 @@ Plug 'arzg/vim-colors-xcode'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'davidhalter/jedi-vim' " for python coding
-Plug 'Yggdroot/indentLine'
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -36,13 +35,10 @@ set clipboard+=unnamed
 filetype on
 set hidden
 
+
 set wildmode=list:longest
 set history=2000
 set shell=fish
-
-" indentCode用の設定
-let g:indentLine_setColors = 0
-let g:indentLine_fileTypeExclude = ['help', 'markdown']
 
 " Key Mapping
 inoremap <silent> jj <ESC>
@@ -58,7 +54,7 @@ nnoremap <silent> ]B :blast<CR>
 set encoding=utf-8
 set fenc=utf-8
 
-" Insert
+" Cursor
 let &t_SI.="\e[6 q"
 let &t_EI.="\e[2 q"
 
