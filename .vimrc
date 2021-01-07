@@ -10,6 +10,7 @@ Plug 'davidhalter/jedi-vim' " for python coding
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'tyru/open-browser.vim' 
 
 call plug#end()
 
@@ -35,7 +36,6 @@ set clipboard+=unnamed
 filetype on
 set hidden
 
-
 set wildmode=list:longest
 set history=2000
 set shell=fish
@@ -49,6 +49,12 @@ nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
 nnoremap <silent> [B :bfirst<CR>
 nnoremap <silent> ]B :blast<CR>
+
+" Keymapping for open-browser.vim
+nmap gx <Plug>(openbrowser-smart-search)
+vmap gx <Plug>(openbrowser-smart-search)
+nnoremap <Leader>o :<C-u>excute "OpenBrowser" "file:///".expand('%:p:gs?\\?/?')<CR>
+
 
 " Encoding
 set encoding=utf-8
