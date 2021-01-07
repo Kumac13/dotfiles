@@ -1,14 +1,14 @@
-# intallation of fish
+# Intallation of fish
 ```sh
 brew install fish
 ````
 
-# installation of fihser
+# Installation of Fihser
 ```sh
 curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
 ```
 
-# installation of plugins
+# Installation of Plugins
 ```sh
 fisher install oh-my-fish/theme-bobthefish
 
@@ -19,13 +19,18 @@ fisher install jethrokuan/fzf
 fisher install decors/fish-ghq
 ```
 
-# auto complete
+# Set auto complete
 ```sh
 fish_update_completions
 ```
 
-# change 'ls' command color 
+# Change 'ls' command color 
 ```sh
 touch ~/.config/fish/config.fish
 export LSCOLORS=gxfxcxdxbxegedabagacad
+```
+
+# Make 
+```sh
+ln -sf ~/ghq/github.com/Kumac13/dotfiles/fish/memo.fish ~/.config/fish/functions/
 ```
