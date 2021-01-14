@@ -11,6 +11,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tyru/open-browser.vim' 
+Plug 'neoclide/coc.nvim', {'branch': 'release'} 
 
 call plug#end()
 
@@ -40,7 +41,8 @@ set clipboard+=unnamed
 " File
 filetype on
 set hidden
-
+set nobackup
+set nowritebackup
 set wildmode=list:longest
 set history=2000
 set shell=fish
@@ -60,7 +62,6 @@ nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
 nnoremap <Leader>o :<C-u>excute "OpenBrowser" "file:///".expand('%:p:gs?\\?/?')<CR>
 
-
 " Encoding
 set encoding=utf-8
 set fenc=utf-8
@@ -77,3 +78,26 @@ let g:vim_markdown_strikethrough = 1 " 取り消し線
 
 " ====== Command  ======
 command! Terminal call popup_create(term_start([&shell], #{ hidden: 1, term_finish: 'close'}), #{ border: [], minwidth: winwidth(0)/2, minheight: &lines/2 })
+
+" ===== coc.vim =====
+" Use tab for trigger completion with characters ahead and navigate.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <c-space> to trigger completion.
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
+
