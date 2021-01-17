@@ -47,6 +47,10 @@ set wildmode=list:longest
 set history=2000
 set shell=fish
 
+" Search
+set hlsearch
+set incsearch
+
 " Key Mapping
 inoremap <silent> jj <ESC>
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'  
