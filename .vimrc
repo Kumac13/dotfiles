@@ -41,6 +41,13 @@ set showcmd
 set ruler
 set clipboard+=unnamed
 
+" html
+augroup HTMLANDXML
+  autocmd!
+  autocmd Filetype xml inoremap <buffer> </ </<C-x><C-o>
+  autocmd Filetype html inoremap <buffer> </ </<C-x><C-o>
+augroup END
+
 "===== Preference ===== 
 " File
 filetype on
