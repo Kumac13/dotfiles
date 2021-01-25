@@ -41,6 +41,13 @@ set showcmd
 set ruler
 set clipboard+=unnamed
 
+" HTML
+augroup HTMLANDXML
+  autocmd!
+  autocmd Filetype xml inoremap <buffer> </ </<C-x><C-o>
+  autocmd Filetype html inoremap <buffer> </ </<C-x><C-o>
+augroup END
+
 "===== Preference ===== 
 " File
 filetype on
@@ -50,6 +57,10 @@ set nowritebackup
 set wildmode=list:longest
 set history=2000
 set shell=fish
+
+" Indent
+set shiftwidth=2
+set tabstop=2
 
 " Search
 set hlsearch
