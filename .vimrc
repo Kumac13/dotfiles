@@ -66,6 +66,20 @@ set incsearch
 inoremap <silent> jj <ESC>
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'  
 
+" Key Mapping for Insert Mode
+inoremap <C-a> <Home>
+cnoremap <C-a> <Home>
+inoremap <C-e> <End>
+cnoremap <C-e> <End>
+inoremap <C-p> <Up>
+cnoremap <C-p> <Up>
+inoremap <C-n> <Down>
+cnoremap <C-n> <Down>
+inoremap <C-b> <Left>
+cnoremap <C-b> <Left>
+inoremap <C-f> <Right>
+cnoremap <C-f> <Right>
+
 " Keymapping for unipaired.vim
 nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
