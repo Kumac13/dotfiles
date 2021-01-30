@@ -1,6 +1,7 @@
 # vim用のメモを取るためのスクリプト
 function memo
 
+   cd ~/Dropbox/memo/
    set -e date
    setenv date (date +%F) # フルの日付
    setenv yearAndMonth (date +%Y-%m) # フォルダ用の月までの日付
