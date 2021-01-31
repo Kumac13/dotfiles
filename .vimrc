@@ -12,6 +12,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tyru/open-browser.vim' 
 Plug 'neoclide/coc.nvim', {'branch': 'release'} 
+Plug 'rust-lang/rust.vim'
 
 call plug#end()
 
@@ -51,6 +52,7 @@ augroup END
 "===== Preference ===== 
 " File
 filetype on
+filetype plugin indent on
 set hidden
 set nobackup
 set nowritebackup
@@ -134,3 +136,5 @@ else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
 
+" ===== Rust =====
+let g:rustfmt_autosave = 1
