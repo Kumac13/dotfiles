@@ -40,7 +40,5 @@ function memo
  end
 
 function gmemo
-   set -e date
-   setenv yearAndMonth (date +%Y-%m)
-   cd ~/Dropbox/memo/$yearAndMonth
+   cd ~/Dropbox/memo/
 end
