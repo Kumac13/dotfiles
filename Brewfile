@@ -8,6 +8,8 @@ brew "ghq"
 brew "fish"
 brew "bat"
 brew "speedtest"
+brew "tig"
+brew "ripgrep"
 
 cask "alfred"
 cask "google-chrome"
@@ -19,4 +21,3 @@ cask "vagrant"
 cask "karabiner-elements"
 
 mas "Slack", id: 803453959
-mas "Bear", id: 1091189122
