@@ -10,9 +10,10 @@ Plug 'davidhalter/jedi-vim' " for python coding
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'tyru/open-browser.vim' 
+Plug 'tyru/open-browser.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'} 
 Plug 'rust-lang/rust.vim'
+Plug 'skanehira/gh.vim'
 
 call plug#end()
 
