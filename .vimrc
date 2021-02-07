@@ -35,7 +35,6 @@ highlight EndOfBuffer ctermbg=none
 
 " terminal
 set splitbelow
-set termwinsize=15x0
 
 " others
 set laststatus=2
