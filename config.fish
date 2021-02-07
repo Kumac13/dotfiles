@@ -14,3 +14,7 @@ alias gd='git diff'
 alias gl='git log'
 alias gc='git checkout'
 
+# path
+set -x PYENV_ROOT $HOME/.pyenv
+set -x PATH $PYENV_ROOT/bin: $PATH
+
