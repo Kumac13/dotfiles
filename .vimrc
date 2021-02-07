@@ -70,7 +70,6 @@ set incsearch
 
 " Key Mapping
 inoremap <silent> jj <ESC>
-cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'  
 nnoremap ss :<C-u>sp<CR><C-w>j
 nnoremap sv :<C-u>vs<CR><C-w>l
 
