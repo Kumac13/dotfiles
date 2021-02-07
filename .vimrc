@@ -10,9 +10,10 @@ Plug 'davidhalter/jedi-vim' " for python coding
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'tyru/open-browser.vim' 
+Plug 'tyru/open-browser.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'} 
 Plug 'rust-lang/rust.vim'
+Plug 'skanehira/gh.vim'
 
 call plug#end()
 
@@ -34,7 +35,6 @@ highlight EndOfBuffer ctermbg=none
 
 " terminal
 set splitbelow
-set termwinsize=15x0
 
 " others
 set laststatus=2
@@ -71,6 +71,8 @@ set incsearch
 " Key Mapping
 inoremap <silent> jj <ESC>
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'  
+nnoremap ss :<C-u>sp<CR><C-w>j
+nnoremap sv :<C-u>vs<CR><C-w>l
 
 " Key Mapping for Insert Mode
 inoremap <C-a> <Home>
@@ -110,9 +112,6 @@ let g:vim_markdown_new_list_item_indent=2
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_fenced_languages = ['csharp=cs'] " codeblockで別の言語を有効にする
 let g:vim_markdown_strikethrough = 1 " 取り消し線
-
-" ====== Command  ======
-command! Terminal call popup_create(term_start([&shell], #{ hidden: 1, term_finish: 'close'}), #{ border: [], minwidth: winwidth(0)/2, minheight: &lines/2 })
 
 " ===== coc.vim =====
 " Use tab for trigger completion with characters ahead and navigate.
