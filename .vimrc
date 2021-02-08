@@ -70,8 +70,6 @@ set incsearch
 
 " Key Mapping
 inoremap <silent> jj <ESC>
-nnoremap ss :<C-u>sp<CR><C-w>j
-nnoremap sv :<C-u>vs<CR><C-w>l
 
 " Key Mapping for Insert Mode
 inoremap <C-a> <Home>
