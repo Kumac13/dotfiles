@@ -30,7 +30,9 @@ touch ~/.config/fish/config.fish
 export LSCOLORS=gxfxcxdxbxegedabagacad
 ```
 
-# Make 
+# Add Functions 
 ```sh
 ln -sf ~/ghq/github.com/Kumac13/dotfiles/fish/memo.fish ~/.config/fish/functions/
+
+ln -sf ~/ghq/github.com/Kumac13/dotfiles/fish/fish_user_key_bindings.fish ~/.config/fish/functions/
 ```

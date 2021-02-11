@@ -5,6 +5,7 @@ set -x FZF_DEFAULT_COMMAND "ag -g ."
 set -x FZF_DEFAULT_COMMAND 'ag --hidden --ignore .git -g ""'
 set -x LANG "en_US.UTF-8"
 set -x LC_CTYPE "en_US.UTF-8"
+fish_vi_key_bindings
 
 
 # alias
