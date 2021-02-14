@@ -14,6 +14,7 @@ Plug 'tyru/open-browser.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'} 
 Plug 'rust-lang/rust.vim'
 Plug 'skanehira/gh.vim'
+Plug 'mattn/emmet-vim'
 
 call plug#end()
 
