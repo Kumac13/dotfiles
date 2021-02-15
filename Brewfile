@@ -10,6 +10,7 @@ brew "bat"
 brew "speedtest"
 brew "tig"
 brew "ripgrep"
+brew "tree"
 
 cask "alfred"
 cask "google-chrome"
