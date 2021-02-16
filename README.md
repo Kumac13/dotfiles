@@ -2,4 +2,4 @@
 
 ## How to Use
 
-## How to Install
+## How to Install Brewfile
