@@ -16,6 +16,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'skanehira/gh.vim'
 Plug 'mattn/emmet-vim'
 Plug 'iberianpig/tig-explorer.vim'
+Plug 'easymotion/vim-easymotion'
 
 call plug#end()
 
