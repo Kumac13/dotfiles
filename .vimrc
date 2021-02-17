@@ -15,6 +15,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'rust-lang/rust.vim'
 Plug 'skanehira/gh.vim'
 Plug 'mattn/emmet-vim'
+Plug 'iberianpig/tig-explorer.vim'
 
 call plug#end()
 
@@ -23,7 +24,7 @@ set number
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme = 'deus'
+let g:airline_theme = 'minimalist'
 
 " colorscheme
 syntax on
