@@ -136,3 +136,11 @@ endif
 
 " ===== Rust =====
 let g:rustfmt_autosave = 1
+
+" ===== fzf.vim =====
+nnoremap <Leader>f :Files<CR>
+nnoremap <leader>rg :Rg<CR>
+
+" ===== tig-explorer.vim =====
+" open tig
+nnoremap <Leader>t :TigOpenProjectRootDir<CR>
