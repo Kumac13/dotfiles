@@ -5,8 +5,6 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'arzg/vim-colors-xcode'
 Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
-Plug 'davidhalter/jedi-vim' " for python coding
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -154,6 +152,7 @@ nnoremap <leader>rg :Rg<CR>
 nnoremap <Leader>t :TigOpenProjectRootDir<CR>
 
 " ===== defx.vim =====
+nnoremap <Leader>d :Defx<CR>
 autocmd FileType defx call s:defx_my_settings()
 function! s:defx_my_settings() abort
   " Define mappings
