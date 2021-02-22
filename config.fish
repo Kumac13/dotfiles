@@ -11,4 +11,5 @@ alias prev="fzf --preview 'bat --style=numbers --color=always {}'"
 #set -x PATH $HOME/.pyenv/bin $PATH
 set -x PATH /usr/local/bin/python3 /usr/local/bin /usr/sbin $PATH
 set -x PGDATA /user/local/var/postgres
+status --is-interactive; and source (rbenv init -|psub)
 
