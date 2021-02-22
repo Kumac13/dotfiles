@@ -6,10 +6,12 @@ fish_vi_key_bindings
 
 # alias
 alias prev="fzf --preview 'bat --style=numbers --color=always {}'"
+alias postgrestart='pg_ctl -D /usr/local/var/postgres start'
 
 # path
-#set -x PATH $HOME/.pyenv/bin $PATH
 set -x PATH /usr/local/bin/python3 /usr/local/bin /usr/sbin $PATH
-set -x PGDATA /user/local/var/postgres
+set -x PGDATA /usr/local/var/postgres
+set -x PATH $HOME/.rbenv/bin $PATH
+rbenv init - fish | source
 status --is-interactive; and source (rbenv init -|psub)
 
