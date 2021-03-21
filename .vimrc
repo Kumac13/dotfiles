@@ -15,6 +15,7 @@ Plug 'skanehira/gh.vim'
 Plug 'mattn/emmet-vim'
 Plug 'iberianpig/tig-explorer.vim'
 Plug 'easymotion/vim-easymotion'
+Plug 'ghifarit53/tokyonight-vim'
 if has('nvim')
   Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -33,13 +34,20 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = 'minimalist'
 
 " colorscheme
-syntax on
-colorscheme xcodedark
-highlight Normal ctermbg=none
-highlight NonText ctermbg=none
-highlight LineNr ctermbg=none
-highlight Folded ctermbg=none
-highlight EndOfBuffer ctermbg=none 
+"syntax on
+" colorscheme xcodedark
+" highlight Normal ctermbg=none
+" highlight NonText ctermbg=none
+" highlight LineNr ctermbg=none
+" highlight Folded ctermbg=none
+" highlight EndOfBuffer ctermbg=none 
+
+set termguicolors
+let g:tokyonight_style = 'night'
+let g:tokyonight_transparent_background = 1
+let g:lightline = {'colorscheme': 'tokyonight'}
+let g:tokyonight_disable_italic_comment = 1
+colorscheme tokyonight
 
 " terminal
 set splitbelow
