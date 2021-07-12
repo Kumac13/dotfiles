@@ -16,6 +16,7 @@ Plug 'mattn/emmet-vim'
 Plug 'iberianpig/tig-explorer.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'ghifarit53/tokyonight-vim'
+Plug 'ruanyl/vim-gh-line'
 if has('nvim')
   Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 else
