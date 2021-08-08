@@ -179,6 +179,18 @@ let g:EasyMotion_smartcase = 1
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 
+" ===== abbr =====
+iab tsk - [ ] [TASK]
+iad mtg - [ ] [MTG]
+augroup my_vimrc
+  autocmd FileType sql iabbrev <buffer> select SELECT
+  autocmd FileType sql iabbrev <buffer> from FROM
+  autocmd FileType sql iabbrev <buffer> where WHERE
+  autocmd FileType sql iabbrev <buffer> order ORDER
+  autocmd FileType sql iabbrev <buffer> by BY
+  autocmd FileType sql iabbrev <buffer> group GROUP
+augroup END
+
 " ===== defx.vim =====
 nnoremap <Leader>d :Defx<CR>
 autocmd FileType defx call s:defx_my_settings()
