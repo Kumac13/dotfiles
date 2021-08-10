@@ -180,8 +180,8 @@ map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 
 " ===== abbr =====
-iab tsk - [ ] [TASK]
-iab mtg - [ ] [MTG]
+autocmd FileType md iab tsk - [ ] [TASK]
+autocmd FileType md iab mtg - [ ] [MTG]
 augroup my_vimrc
   autocmd FileType sql iabbrev <buffer> select SELECT
   autocmd FileType sql iabbrev <buffer> from FROM
