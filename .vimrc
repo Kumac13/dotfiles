@@ -181,7 +181,7 @@ map <Leader>k <Plug>(easymotion-k)
 
 " ===== abbr =====
 iab tsk - [ ] [TASK]
-iad mtg - [ ] [MTG]
+iab mtg - [ ] [MTG]
 augroup my_vimrc
   autocmd FileType sql iabbrev <buffer> select SELECT
   autocmd FileType sql iabbrev <buffer> from FROM
