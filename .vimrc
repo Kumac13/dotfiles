@@ -17,6 +17,7 @@ Plug 'iberianpig/tig-explorer.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'ruanyl/vim-gh-line'
+Plug 'vim-denops/denops.vim'
 if has('nvim')
   Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 else
