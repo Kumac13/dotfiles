@@ -10,6 +10,8 @@ brew "speedtest"
 brew "tig"
 brew "ripgrep"
 brew "tree"
+brew "python3"
+brew "rbenv"
 
 cask "alfred"
 cask "google-chrome"
@@ -20,5 +22,6 @@ cask "virtualbox"
 cask "vagrant"
 cask "karabiner-elements"
 cask "dropbox"
+cask "skitch"
 
 mas "Slack", id: 803453959
