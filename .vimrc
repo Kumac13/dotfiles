@@ -1,6 +1,5 @@
-vim-plugin
+" vim-plugin
 call plug#begin('~/.vim/plugged')
-
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'arzg/vim-colors-xcode'
