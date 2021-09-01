@@ -14,6 +14,7 @@ set -x PGDATA /usr/local/var/postgres
 set -x PATH $HOME/.rbenv/bin $PATH
 set -x PATH $HOME/.nodenv/bin $PATH
 set -x PATH $HOME/go/bin $PATH
+set -x PATH $HOME/.cargo/bin $PATH
 eval (nodenv init - | source)
 rbenv init - fish | source
 status --is-interactive; and source (rbenv init -|psub)
