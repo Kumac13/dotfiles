@@ -19,7 +19,6 @@ Plug 'ruanyl/vim-gh-line'
 Plug 'vim-denops/denops.vim'
 Plug 'machakann/vim-sandwich'
 Plug 'SirVer/ultisnips'
-Plug 'APZelos/blamer.nvim'
 if has('nvim')
   Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -273,6 +272,3 @@ let g:UltiSnipsJumpBackwardTrigger="<c-p>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
-" ===== blamer.nvim =====
-let g:blamer_enabled = 1
-let g:blamer_delay = 500
