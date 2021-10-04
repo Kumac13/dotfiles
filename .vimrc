@@ -80,6 +80,7 @@ set history=2000
 set shell=fish
 
 " Indent
+set expandtab
 set shiftwidth=2
 set tabstop=2
 
