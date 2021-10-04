@@ -77,6 +77,7 @@ set nowritebackup
 set wildmode=list:longest
 set history=2000
 set shell=fish
+set backspace=indent,eol,start
 
 " Indent
 set expandtab
