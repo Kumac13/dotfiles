@@ -68,6 +68,10 @@ augroup HTMLANDXML
 augroup END
 
 "===== Preference ===== 
+" Encoding
+set encoding=utf-8
+set fenc=utf-8
+
 " File
 filetype on
 filetype plugin indent on
@@ -116,9 +120,6 @@ nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
 nnoremap <Leader>o :<C-u>excute "OpenBrowser" "file:///".expand('%:p:gs?\\?/?')<CR>
 
-" Encoding
-set encoding=utf-8
-set fenc=utf-8
 
 " Cursor
 let &t_SI.="\e[6 q"
