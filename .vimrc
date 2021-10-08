@@ -18,6 +18,7 @@ Plug 'ruanyl/vim-gh-line'
 Plug 'vim-denops/denops.vim'
 Plug 'machakann/vim-sandwich'
 Plug 'SirVer/ultisnips'
+Plug 'sheerun/vim-polyglot'
 if has('nvim')
   Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 else
