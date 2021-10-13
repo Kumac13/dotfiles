@@ -69,7 +69,7 @@ set fenc=utf-8
 
 " File
 filetype on
- plugin indent on
+filetype plugin indent on
 set hidden
 set nobackup
 set nowritebackup
