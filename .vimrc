@@ -19,6 +19,7 @@ Plug 'vim-denops/denops.vim'
 Plug 'machakann/vim-sandwich'
 Plug 'SirVer/ultisnips'
 Plug 'sheerun/vim-polyglot'
+Plug 'kristijanhusak/defx-git'
 if has('nvim')
   Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -68,7 +69,7 @@ set fenc=utf-8
 
 " File
 filetype on
-filetype plugin indent on
+ plugin indent on
 set hidden
 set nobackup
 set nowritebackup
@@ -194,6 +195,27 @@ augroup END
 
 " ===== defx.vim =====
 nnoremap <Leader>d :Defx<CR>
+call defx#custom#option('_', {
+      \ 'direction': 'topleft',
+      \ 'show_ignored_files': 1,
+      \ 'buffer_name': 'exlorer',
+      \ 'toggle': 1,
+      \ 'resume': 1,
+      \ 'columns': 'git:filename',
+      \ })
+
+call defx#custom#column('git', 'indicators', {
+  \ 'Modified'  : 'M',
+  \ 'Staged'    : 'S',
+  \ 'Untracked' : ' ',
+  \ 'Renamed'   : ' ',
+  \ 'Unmerged'  : ' ',
+  \ 'Ignored'   : ' ',
+  \ 'Deleted'   : 'D',
+  \ 'Unknown'   : '?'
+  \ })
+
+
 autocmd FileType defx call s:defx_my_settings()
 function! s:defx_my_settings() abort
   " Define mappings
