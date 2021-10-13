@@ -147,6 +147,9 @@ else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
 
+" Set :Format for format command
+command! -nargs=0 Format :call CocAction('format')
+
 " ===== Rust =====
 let g:rustfmt_autosave = 1
 
