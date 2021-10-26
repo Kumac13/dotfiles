@@ -201,7 +201,7 @@ call defx#custom#option('_', {
       \ 'buffer_name': 'exlorer',
       \ 'toggle': 1,
       \ 'resume': 1,
-      \ 'columns': 'git:filename',
+      \ 'columns': 'indent:git:filename',
       \ })
 
 call defx#custom#column('git', 'indicators', {
