@@ -29,6 +29,7 @@ bind status D ?@rm %(file)
 # そのほかのGitコマンド
 bind generic F ?@!git fetch %(remote)
 bind generic U ?@!git pull %(remote)
+bind main ! ?git revert %(commit)
 
 color cursor black white bold
 
