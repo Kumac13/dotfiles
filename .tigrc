@@ -21,6 +21,10 @@ set refresh-mode = auto
 # Pで現在のブランチへpush
 bind generic P ?@!git push origin %(repo:head)
 
+# R as git rebase -i
+bind main R !git rebase -i %(commit)
+bind diff R !git rebase -i %(commit)
+
 # Dでstatus viewのuntracked fileを削除できるようにする
 # https://github.com/jonas/tig/issues/31 見るとおもしろい
 # https://github.com/jonas/tig/issues/393　見るとおもしろい
