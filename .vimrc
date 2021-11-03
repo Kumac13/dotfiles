@@ -20,6 +20,7 @@ Plug 'machakann/vim-sandwich'
 Plug 'SirVer/ultisnips'
 Plug 'sheerun/vim-polyglot'
 Plug 'kristijanhusak/defx-git'
+Plug 'tpope/vim-rails'
 if has('nvim')
   Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -151,8 +152,25 @@ endif
 " Set :Format for format command
 command! -nargs=0 Format :call CocAction('format')
 
+" Setting for solargrapo
+let g:coc_global_extensions = ['coc-solargraph']
+
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
 " ===== Rust =====
 let g:rustfmt_autosave = 1
+
+" ===== Ruby =====
+
 
 " ===== fzf.vim =====
 nnoremap <Leader>f :Files<CR>
