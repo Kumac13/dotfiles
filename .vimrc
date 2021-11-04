@@ -78,6 +78,7 @@ set wildmode=list:longest
 set history=2000
 set shell=fish
 set backspace=indent,eol,start
+autocmd BufWritePre * :%s/\s\+$//e
 
 " Indent
 set expandtab
