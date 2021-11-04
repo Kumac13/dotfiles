@@ -7,7 +7,7 @@ Plug 'godlygeek/tabular'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tyru/open-browser.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'} 
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'rust-lang/rust.vim'
 Plug 'skanehira/gh.vim'
 Plug 'mattn/emmet-vim'
@@ -31,8 +31,8 @@ endif
 
 call plug#end()
 
-"===== Look ===== 
-set number 
+"===== Look =====
+set number
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
@@ -45,7 +45,7 @@ let g:airline_theme = 'minimalist'
 " highlight NonText ctermbg=none
 " highlight LineNr ctermbg=none
 " highlight Folded ctermbg=none
-" highlight EndOfBuffer ctermbg=none 
+" highlight EndOfBuffer ctermbg=none
 
 set termguicolors
 let g:tokyonight_style = 'night'
@@ -63,7 +63,7 @@ set showcmd
 set ruler
 set clipboard+=unnamed
 
-"===== Preference ===== 
+"===== Preference =====
 " Encoding
 set encoding=utf-8
 set fenc=utf-8
