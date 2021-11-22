@@ -21,6 +21,7 @@ Plug 'SirVer/ultisnips'
 Plug 'sheerun/vim-polyglot'
 Plug 'kristijanhusak/defx-git'
 Plug 'tpope/vim-rails'
+Plug 'ejholmes/vim-forcedotcom'
 if has('nvim')
   Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 else
