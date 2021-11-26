@@ -154,6 +154,7 @@ endif
 " Set :Format for format command
 command! -nargs=0 Format :call CocAction('format')
 
+" ===== Ruby =====
 " Setting for solargrapo
 let g:coc_global_extensions = ['coc-solargraph']
 
@@ -170,9 +171,6 @@ endfunction
 
 " ===== Rust =====
 let g:rustfmt_autosave = 1
-
-" ===== Ruby =====
-
 
 " ===== fzf.vim =====
 nnoremap <Leader>f :Files<CR>
