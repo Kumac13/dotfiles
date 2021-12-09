@@ -312,3 +312,30 @@ let g:UltiSnipsJumpBackwardTrigger="<c-p>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
+
+"===== URL paste =====
+let s:clipboard_register = has('linux') || has('unix') ? '+' : '*'
+function! InsertMarkdownLink() abort
+  " use register `9`
+  let old = getreg('9')
+  let link = trim(getreg(s:clipboard_register))
+  if link !~# '^http.*'
+    normal! gvp
+    return
+  endif
+
+  " replace `[text](link)` to selected text
+  normal! gv"9y
+  let word = getreg(9)
+  let newtext = printf('[%s](%s)', word, link)
+  call setreg(9, newtext)
+  normal! gv"9p
+
+  " restore old data
+  call setreg(9, old)
+endfunction
+
+augroup markdown-insert-link
+  au!
+  au FileType markdown vnoremap <buffer> <silent> p :<C-u>call InsertMarkdownLink()<CR>
+augroup END
