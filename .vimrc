@@ -64,6 +64,7 @@ set laststatus=2
 set showcmd
 set ruler
 set clipboard+=unnamed
+set viminfofile=NONE
 
 "===== Preference =====
 " Encoding
