@@ -23,6 +23,7 @@ Plug 'kristijanhusak/defx-git'
 Plug 'tpope/vim-rails'
 Plug 'ejholmes/vim-forcedotcom'
 Plug 'thalesmello/lkml.vim'
+Plug 'iamcco/markdown-preview.nvim'
 if has('nvim')
   Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 else
