@@ -341,3 +341,6 @@ augroup markdown-insert-link
   au!
   au FileType markdown vnoremap <buffer> <silent> p :<C-u>call InsertMarkdownLink()<CR>
 augroup END
+
+"===== Markdown Preview =====
+nnoremap <Leader>m :MarkdownPreview<CR>
