@@ -34,8 +34,10 @@ endif
 
 call plug#end()
 
-"===== Look =====
+"===== Set =====
 set number
+set splitright
+set splitbelow
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
@@ -56,9 +58,6 @@ let g:tokyonight_transparent_background = 1
 let g:lightline = {'colorscheme': 'tokyonight'}
 let g:tokyonight_disable_italic_comment = 1
 colorscheme tokyonight
-
-" terminal
-set splitbelow
 
 " others
 set laststatus=2
