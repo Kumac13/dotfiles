@@ -22,7 +22,8 @@ Plug 'kristijanhusak/defx-git'
 Plug 'tpope/vim-rails'
 Plug 'ejholmes/vim-forcedotcom'
 Plug 'thalesmello/lkml.vim'
-Plug 'iamcco/markdown-preview.nvim'
+Plug 'Kumac13/session.vim'
+Plug 'Kumac13/sfdx.vim'
 if has('nvim')
   Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -38,19 +39,7 @@ set number
 set splitright
 set splitbelow
 
-" Airline
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme = 'minimalist'
-
-" colorscheme
-"syntax on
-" colorscheme xcodedark
-" highlight Normal ctermbg=none
-" highlight NonText ctermbg=none
-" highlight LineNr ctermbg=none
-" highlight Folded ctermbg=none
-" highlight EndOfBuffer ctermbg=none
-
+"===== Color =====
 set termguicolors
 let g:tokyonight_style = 'night'
 let g:tokyonight_transparent_background = 1
@@ -97,6 +86,7 @@ inoremap <silent> jj <ESC>
 " Key Mapping for <Leader>
 nnoremap <silent> <Leader>q :q<CR>
 nnoremap <silent> <Leader>w :w<CR>
+
 " Key Mapping for Insert Mode
 inoremap <C-a> <Home>
 cnoremap <C-a> <Home>
@@ -121,7 +111,6 @@ nnoremap <silent> ]B :blast<CR>
 nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
 nnoremap <Leader>o :<C-u>excute "OpenBrowser" "file:///".expand('%:p:gs?\\?/?')<CR>
-
 
 " Cursor
 let &t_SI.="\e[6 q"
@@ -326,9 +315,6 @@ augroup markdown-insert-link
   au FileType markdown vnoremap <buffer> <silent> p :<C-u>call InsertMarkdownLink()<CR>
 augroup END
 
-"===== Markdown Preview =====
-nnoremap <Leader>m :MarkdownPreview<CR>
-
 "===== tig setting =====
 nnoremap <silent> <Leader>t :<C-u>silent call <SID>tig_status()<CR>
 function! s:tig_status() abort
@@ -356,5 +342,3 @@ function! s:split_type() abort
         return 'vert'
     endif
 endfunction
-
-
