@@ -94,6 +94,9 @@ set incsearch
 " Key Mapping
 inoremap <silent> jj <ESC>
 
+" Key Mapping for <Leader>
+nnoremap <silent> <Leader>q :q<CR>
+nnoremap <silent> <Leader>w :w<CR>
 " Key Mapping for Insert Mode
 inoremap <C-a> <Home>
 cnoremap <C-a> <Home>
@@ -193,8 +196,6 @@ map <Leader> <Plug>(easymotion-prefix)
 let g:EasyMotion_smartcase = 1
 
 " JK motions: Line motions
-map <Leader>j <Plug>(easymotion-j)
-map <Leader>k <Plug>(easymotion-k)
 
 " ===== abbr =====
 autocmd FileType md iab tsk - [ ] [TASK]
@@ -207,6 +208,8 @@ augroup my_vimrc
   autocmd FileType sql iabbrev <buffer> by BY
   autocmd FileType sql iabbrev <buffer> group GROUP
 augroup END
+map <Leader>j <Plug>(easymotion-w)
+map <Leader>k <Plug>(easymotion-b)
 
 " ===== defx.vim =====
 nnoremap <Leader>d :Defx<CR>
