@@ -195,19 +195,6 @@ map <Leader> <Plug>(easymotion-prefix)
 " Turn on case insensitive feature
 let g:EasyMotion_smartcase = 1
 
-" JK motions: Line motions
-
-" ===== abbr =====
-autocmd FileType md iab tsk - [ ] [TASK]
-autocmd FileType md iab mtg - [ ] [MTG]
-augroup my_vimrc
-  autocmd FileType sql iabbrev <buffer> select SELECT
-  autocmd FileType sql iabbrev <buffer> from FROM
-  autocmd FileType sql iabbrev <buffer> where WHERE
-  autocmd FileType sql iabbrev <buffer> order ORDER
-  autocmd FileType sql iabbrev <buffer> by BY
-  autocmd FileType sql iabbrev <buffer> group GROUP
-augroup END
 map <Leader>j <Plug>(easymotion-w)
 map <Leader>k <Plug>(easymotion-b)
 
