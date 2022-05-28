@@ -11,7 +11,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'rust-lang/rust.vim'
 Plug 'skanehira/gh.vim'
 Plug 'mattn/emmet-vim'
-Plug 'iberianpig/tig-explorer.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'ruanyl/vim-gh-line'
@@ -178,10 +177,6 @@ let g:rustfmt_autosave = 1
 nnoremap <Leader>f :Files<CR>
 nnoremap <leader>rg :Rg<CR>
 
-" ===== tig-explorer.vim =====
-" open tig
-nnoremap <Leader>t :TigOpenProjectRootDir<CR>
-
 " ===== easymotion =====
 map <Leader> <Plug>(easymotion-prefix)
 " let g:EasyMotion_do_mapping = 0 " Disable default mapping
@@ -343,3 +338,33 @@ augroup END
 
 "===== Markdown Preview =====
 nnoremap <Leader>m :MarkdownPreview<CR>
+
+"===== tig setting =====
+nnoremap <silent> <Leader>t :<C-u>silent call <SID>tig_status()<CR>
+function! s:tig_status() abort
+    call s:open_term('tig status')
+endfunction
+
+function! s:open_term(cmd) abort
+    let split = s:split_type()
+
+    call execute(printf('%s term ++close %s', split, a:cmd))
+
+    setlocal bufhidden=delete
+    setlocal noswapfile
+    setlocal nobuflisted
+endfunction
+
+function! s:split_type() abort
+    " NOTE: my cell ratio: width:height == 1:2.1
+    let width = winwidth(win_getid())
+    let height = winheight(win_getid()) * 2.1
+
+    if height > width
+        return 'bo'
+    else
+        return 'vert'
+    endif
+endfunction
+
+
