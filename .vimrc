@@ -22,8 +22,8 @@ Plug 'kristijanhusak/defx-git'
 Plug 'tpope/vim-rails'
 Plug 'ejholmes/vim-forcedotcom'
 Plug 'thalesmello/lkml.vim'
-Plug 'Kumac13/session.vim'
 Plug 'Kumac13/sfdx.vim'
+Plug 'LeafCage/vimhelpgenerator'
 if has('nvim')
   Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 else
