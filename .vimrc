@@ -39,6 +39,7 @@ set nonumber
 set splitright
 set splitbelow
 set wildmenu
+tab split
 
 "===== Color =====
 set termguicolors
@@ -103,10 +104,8 @@ inoremap <C-f> <Right>
 cnoremap <C-f> <Right>
 
 " Keymapping for unipaired.vim
-nnoremap <silent> [b :bprevious<CR>
-nnoremap <silent> ]b :bnext<CR>
-nnoremap <silent> [B :bfirst<CR>
-nnoremap <silent> ]B :blast<CR>
+nnoremap <silent> [b :tabp<CR>
+nnoremap <silent> ]b :tabn<CR>
 
 " Keymapping for open-browser.vim
 nmap gx <Plug>(openbrowser-smart-search)
