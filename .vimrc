@@ -39,7 +39,8 @@ set nonumber
 set splitright
 set splitbelow
 set wildmenu
-tab split
+set showtabline=2
+bufdo tab split
 
 "===== Color =====
 set termguicolors
