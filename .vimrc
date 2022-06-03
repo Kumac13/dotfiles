@@ -35,9 +35,10 @@ endif
 call plug#end()
 
 "===== Set =====
-set number
+set nonumber
 set splitright
 set splitbelow
+set wildmenu
 
 "===== Color =====
 set termguicolors
