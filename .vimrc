@@ -4,24 +4,18 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'arzg/vim-colors-xcode'
 Plug 'godlygeek/tabular'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'tyru/open-browser.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'rust-lang/rust.vim'
-Plug 'skanehira/gh.vim'
 Plug 'mattn/emmet-vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'ruanyl/vim-gh-line'
-Plug 'vim-denops/denops.vim'
 Plug 'machakann/vim-sandwich'
 Plug 'SirVer/ultisnips'
 Plug 'sheerun/vim-polyglot'
 Plug 'kristijanhusak/defx-git'
 Plug 'tpope/vim-rails'
-Plug 'ejholmes/vim-forcedotcom'
-Plug 'thalesmello/lkml.vim'
 Plug 'Kumac13/sfdx.vim'
 Plug 'LeafCage/vimhelpgenerator'
 if has('nvim')
@@ -51,7 +45,7 @@ let g:tokyonight_disable_italic_comment = 1
 colorscheme tokyonight
 
 " others
-set laststatus=2
+set laststatus=0
 set showcmd
 set ruler
 set clipboard+=unnamed
