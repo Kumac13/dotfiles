@@ -1,23 +1,23 @@
 " vim-plugin
 call plug#begin('~/.vim/plugged')
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'arzg/vim-colors-xcode'
-Plug 'godlygeek/tabular'
-Plug 'tyru/open-browser.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'rust-lang/rust.vim'
-Plug 'mattn/emmet-vim'
-Plug 'easymotion/vim-easymotion'
-Plug 'ghifarit53/tokyonight-vim'
-Plug 'ruanyl/vim-gh-line'
-Plug 'machakann/vim-sandwich'
-Plug 'SirVer/ultisnips'
-Plug 'sheerun/vim-polyglot'
-Plug 'kristijanhusak/defx-git'
-Plug 'tpope/vim-rails'
-Plug 'Kumac13/sfdx.vim'
-Plug 'LeafCage/vimhelpgenerator'
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+  Plug 'junegunn/fzf.vim'
+  Plug 'arzg/vim-colors-xcode'
+  Plug 'godlygeek/tabular'
+  Plug 'tyru/open-browser.vim'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'rust-lang/rust.vim'
+  Plug 'mattn/emmet-vim'
+  Plug 'easymotion/vim-easymotion'
+  Plug 'ghifarit53/tokyonight-vim'
+  Plug 'ruanyl/vim-gh-line'
+  Plug 'machakann/vim-sandwich'
+  Plug 'SirVer/ultisnips'
+  Plug 'sheerun/vim-polyglot'
+  Plug 'kristijanhusak/defx-git'
+  Plug 'tpope/vim-rails'
+  Plug 'Kumac13/sfdx.vim'
+  Plug 'LeafCage/vimhelpgenerator'
 if has('nvim')
   Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 else
