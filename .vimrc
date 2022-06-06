@@ -17,6 +17,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'kristijanhusak/defx-git'
   Plug 'tpope/vim-rails'
   Plug 'Kumac13/sfdx.vim'
+  Plug 'ejholmes/vim-forcedotcom' " user for syntax highlight and format
   Plug 'LeafCage/vimhelpgenerator'
 if has('nvim')
   Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -147,6 +148,16 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
+augroup coc-format
+  autocmd!
+  autocmd bufWritePost *.js :Format
+  autocmd bufWritePost *.ts :Format
+  autocmd bufWritePost *.cls :Format " depend on vim-force
+  autocmd bufWritePost *.trigger :Format " depend on vim-force
+  autocmd bufWritePost *.html :Format
+  autocmd bufWritePost *.css :Format
+augroup END
 
 
 " ===== Ruby =====
