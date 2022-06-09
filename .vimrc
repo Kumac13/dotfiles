@@ -35,6 +35,7 @@ set splitright
 set splitbelow
 set wildmenu
 set showtabline=2
+set shortmess-=S
 
 "===== Color =====
 set termguicolors
