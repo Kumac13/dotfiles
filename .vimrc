@@ -19,6 +19,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'Kumac13/sfdx.vim'
   Plug 'ejholmes/vim-forcedotcom' " user for syntax highlight and format
   Plug 'LeafCage/vimhelpgenerator'
+  Plug 'previm/previm'
 if has('nvim')
   Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -355,3 +356,7 @@ function! s:split_type() abort
         return 'vert'
     endif
 endfunction
+
+"===== previm =====
+let g:previm_open_cmd = 'open -a Brave\ Browser'
+nnoremap <silent> <Leader>pr :PrevimOpen<CR>
