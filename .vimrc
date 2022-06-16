@@ -360,3 +360,16 @@ endfunction
 "===== previm =====
 let g:previm_open_cmd = 'open -a Brave\ Browser'
 nnoremap <silent> <Leader>pr :PrevimOpen<CR>
+
+"===== git commit ====
+function! s:select_type() abort
+  let line = substitute(getline('.'), '^#\s*', '', 'g')
+  let title = printf('%s: ', split(line, ' ')[0])
+
+  silent! normal!
+  silent! put! =title
+  silent! startinsert!
+endfunction
+
+nnoremap <buffer> <CR><CR> <Cmd>call <SID>select_type()<CR>
+
