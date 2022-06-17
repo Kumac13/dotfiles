@@ -20,6 +20,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'ejholmes/vim-forcedotcom' " user for syntax highlight and format
   Plug 'LeafCage/vimhelpgenerator'
   Plug 'previm/previm'
+  Plug 'pacha/vem-tabline'
 if has('nvim')
   Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 else
