@@ -21,6 +21,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'LeafCage/vimhelpgenerator'
   Plug 'previm/previm'
   Plug 'pacha/vem-tabline'
+  Plug 'thinca/vim-quickrun'
 if has('nvim')
   Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 else
