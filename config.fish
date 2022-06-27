@@ -8,7 +8,6 @@ fish_vi_key_bindings
 alias prev="fzf --preview 'bat --style=numbers --color=always {}'"
 alias postgrestart='pg_ctl -D /usr/local/var/postgres start'
 alias wnt='cd ~/project/'
-alias memo="vimo date" # vimo is implemented by https://github.com/Kumac13/vimo
 
 # path
 # set RUBY_VERSION (ruby -v | sed 's/ruby ([0-9]\.[0-9]\.[0-9]).*/\1/')
