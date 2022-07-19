@@ -22,6 +22,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'previm/previm'
   Plug 'pacha/vem-tabline'
   Plug 'thinca/vim-quickrun'
+  " Plug 'kamykn/spelunker.vim'
 if has('nvim')
   Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 else
