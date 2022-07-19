@@ -18,19 +18,22 @@ set refresh-mode = auto
 #--------------------------------------------------------------#
 ##        key bind                                            ##
 #--------------------------------------------------------------#
-# Pで現在のブランチへpush
+# P as push current branch
 bind generic P ?@!git push origin %(repo:head)
 
 # R as git rebase -i
 bind main R !git rebase -i %(commit)
 bind diff R !git rebase -i %(commit)
 
-# Dでstatus viewのuntracked fileを削除できるようにする
-# https://github.com/jonas/tig/issues/31 見るとおもしろい
-# https://github.com/jonas/tig/issues/393　見るとおもしろい
+# D as remove untracked file
 bind status D ?@rm %(file)
 
-# そのほかのGitコマンド
+# B as new branch
+bind main    B !git branch -m %(branch) "%(prompt Enter branch name: )"
+bind refs    B !git branch -m %(branch) "%(prompt Enter branch name: )"
+bind reflog  B !git branch -m %(branch) "%(prompt Enter branch name: )
+
+# other command
 bind generic F ?@!git fetch %(remote)
 bind generic U ?@!git pull %(remote)
 bind main ! ?git revert %(commit)
