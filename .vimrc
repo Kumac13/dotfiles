@@ -5,7 +5,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'arzg/vim-colors-xcode'
   Plug 'godlygeek/tabular'
   Plug 'tyru/open-browser.vim'
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  "Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'rust-lang/rust.vim'
   Plug 'mattn/emmet-vim'
   Plug 'easymotion/vim-easymotion'
@@ -22,7 +22,17 @@ call plug#begin('~/.vim/plugged')
   Plug 'previm/previm'
   Plug 'pacha/vem-tabline'
   Plug 'thinca/vim-quickrun'
-  " Plug 'kamykn/spelunker.vim'
+  " see setting details for vim-lsp: https://mattn.kaoriya.net/software/vim/20191231213507.htm
+  Plug 'prabirshrestha/vim-lsp'
+  Plug 'mattn/vim-lsp-settings'
+  Plug 'prabirshrestha/asyncomplete.vim'
+  Plug 'prabirshrestha/asyncomplete-lsp.vim'
+  Plug 'prabirshrestha/vim-lsp'
+  Plug 'mattn/vim-lsp-settings'
+  Plug 'mattn/vim-lsp-icons'
+  Plug 'hrsh7th/vim-vsnip'
+  Plug 'hrsh7th/vim-vsnip-integ'
+  Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 if has('nvim')
   Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -32,7 +42,6 @@ else
 endif
 
 call plug#end()
-
 "===== Set =====
 set nonumber
 set splitright
@@ -123,46 +132,46 @@ let g:vim_markdown_fenced_languages = ['csharp=cs'] " codeblockで別の言語�
 let g:vim_markdown_strikethrough = 1 " 取り消し線
 
 " ===== coc.vim =====
-inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-inoremap <silent><expr> <C-x><C-z> coc#pum#visible() ? coc#pum#stop() : "\<C-x>\<C-z>"
-" remap for complete to use tab and <cr>
-inoremap <silent><expr> <TAB>
-      \ coc#pum#visible() ? coc#pum#next(1):
-      \ <SID>check_back_space() ? "\<Tab>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
-inoremap <silent><expr> <c-space> coc#refresh()
+"inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>
+"inoremap <silent><expr> <C-x><C-z> coc#pum#visible() ? coc#pum#stop() : "\<C-x>\<C-z>
+"" remap for complete to use tab and <cr>
+"inoremap <silent><expr> <TAB>
+"      \ coc#pum#visible() ? coc#pum#next(1):
+"      \ <SID>check_back_space() ? "\<Tab> :
+"      \ coc#refresh()
+"inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>
+"inoremap <silent><expr> <c-space> coc#refresh()
+"
+"" Use <c-space> to trigger completion.
+"if has('nvim')
+"  inoremap <silent><expr> <c-space> coc#refresh()
+"else
+"  inoremap <silent><expr> <c-@> coc#refresh()
+"endif
+"
+"" Set :Format for format command
+"command! -nargs=0 Format :call CocAction('format')
+"
+"" Key mapping
+"nmap <silent> gd <Plug>(coc-definition)
+"nmap <silent> gy <Plug>(coc-type-definition)
+"nmap <silent> gi <Plug>(coc-implementation)
+"nmap <silent> gr <Plug>(coc-references)
 
-" Use <c-space> to trigger completion.
-if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
-else
-  inoremap <silent><expr> <c-@> coc#refresh()
-endif
-
-" Set :Format for format command
-command! -nargs=0 Format :call CocAction('format')
-
-" Key mapping
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-
-augroup coc-format
-  autocmd!
-  autocmd bufWritePost *.js :Format
-  autocmd bufWritePost *.ts :Format
-  autocmd bufWritePost *.cls :Format " depend on vim-force
-  autocmd bufWritePost *.trigger :Format " depend on vim-force
-  autocmd bufWritePost *.html :Format
-  autocmd bufWritePost *.css :Format
-augroup END
+"augroup coc-format
+"  autocmd!
+"  autocmd bufWritePost *.js :Format
+"  autocmd bufWritePost *.ts :Format
+"  autocmd bufWritePost *.cls :Format " depend on vim-force
+"  autocmd bufWritePost *.trigger :Format " depend on vim-force
+"  autocmd bufWritePost *.html :Format
+"  autocmd bufWritePost *.css :Format
+"augroup END
 
 
 " ===== Ruby =====
 " Setting for solargrapo
-let g:coc_global_extensions = ['coc-solargraph']
+"let g:coc_global_extensions = ['coc-solargraph']
 
 function! s:check_back_space() abort
   let col = col('.') - 1
