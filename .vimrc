@@ -375,3 +375,9 @@ endfunction
 
 nnoremap <buffer> <CR><CR> <Cmd>call <SID>select_type()<CR>
 
+"===== Prettier =====
+augroup fmt
+  autocmd!
+  autocmd BufWrite *.cls,*.trigger,*.html,*.css PrettierAsync
+augroup END
+
