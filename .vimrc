@@ -30,6 +30,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'Shougo/ddc-around'
   Plug 'Shougo/ddc-matcher_head'
   Plug 'Shougo/ddc-sorter_rank'
+  Plug 'Shougo/ddc-converter_remove_overlap'
+  Plug 'Shougo/pum.vim'
+  Plug 'LumaKernel/ddc-file'
   Plug 'vim-denops/denops.vim'
   Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 if has('nvim')
@@ -381,13 +384,24 @@ augroup fmt
 augroup END
 
 "===== ddc =====
-call ddc#custom#patch_global('sources', ['vim-lsp','around'])
+call ddc#custom#patch_global('sources', ['vim-lsp','around', 'file'])
 call ddc#custom#patch_global('sourceOptions', {
-        \ 'vim-lsp': {
-        \   'matchers': ['matcher_head'],
-        \   'mark': 'lsp',
-        \ },
-        \ })
+       \ '_': {
+       \   'matchers': ['matcher_head'],
+       \   'sorters': ['sorter_rank'],
+       \   'converters': ['converter_remove_overlap'],
+       \ },
+       \ 'around': {'mark': 'Around'},
+       \ 'vim-lsp': {
+       \   'mark': 'LSP',
+       \   'matchers': ['matcher_head'],
+       \   'forceCompletionPattern': '\.|:|->|"\w+/*'
+       \ },
+       \ 'file': {
+       \   'mark': 'file',
+       \   'isVolatile': v:true,
+       \   'forceCompletionPattern': '\S/\S*'
+       \ }})
 
 " Mappings
 
