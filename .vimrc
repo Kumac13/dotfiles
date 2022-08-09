@@ -22,16 +22,15 @@ call plug#begin('~/.vim/plugged')
   Plug 'previm/previm'
   Plug 'pacha/vem-tabline'
   Plug 'thinca/vim-quickrun'
-  " see setting details for vim-lsp: https://mattn.kaoriya.net/software/vim/20191231213507.htm
+  " lsp & ddc
   Plug 'prabirshrestha/vim-lsp'
   Plug 'mattn/vim-lsp-settings'
-  Plug 'prabirshrestha/asyncomplete.vim'
-  Plug 'prabirshrestha/asyncomplete-lsp.vim'
-  Plug 'prabirshrestha/vim-lsp'
-  Plug 'mattn/vim-lsp-settings'
-  Plug 'mattn/vim-lsp-icons'
-  Plug 'hrsh7th/vim-vsnip'
-  Plug 'hrsh7th/vim-vsnip-integ'
+  Plug 'Shougo/ddc.vim'
+  Plug 'shun/ddc-vim-lsp'
+  Plug 'Shougo/ddc-around'
+  Plug 'Shougo/ddc-matcher_head'
+  Plug 'Shougo/ddc-sorter_rank'
+  Plug 'vim-denops/denops.vim'
   Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 if has('nvim')
   Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -378,6 +377,29 @@ nnoremap <buffer> <CR><CR> <Cmd>call <SID>select_type()<CR>
 "===== Prettier =====
 augroup fmt
   autocmd!
-  autocmd BufWrite *.cls,*.trigger,*.html,*.css PrettierAsync
+  autocmd BufWrite *.cls,*.trigger,*.html,*.css,*js,*ts PrettierAsync
 augroup END
+
+"===== ddc =====
+call ddc#custom#patch_global('sources', ['vim-lsp','around'])
+call ddc#custom#patch_global('sourceOptions', {
+        \ 'vim-lsp': {
+        \   'matchers': ['matcher_head'],
+        \   'mark': 'lsp',
+        \ },
+        \ })
+
+" Mappings
+
+" <TAB>: completion.
+inoremap <silent><expr> <TAB>
+\ ddc#map#pum_visible() ? '<C-n>' :
+\ (col('.') <= 1 <Bar><Bar> getline('.')[col('.') - 2] =~# '\s') ?
+\ '<TAB>' : ddc#map#manual_complete()
+
+" <S-TAB>: completion back.
+inoremap <expr><S-TAB>  ddc#map#pum_visible() ? '<C-p>' : '<C-h>'
+
+" Use ddc.
+call ddc#enable()
 
