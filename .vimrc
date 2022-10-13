@@ -184,7 +184,7 @@ endfunction
 let g:rustfmt_autosave = 1
 
 " ===== fzf.vim =====
-nnoremap <Leader>f :Files<CR>
+nnoremap <Leader>f :GFiles<CR>
 nnoremap <leader>rg :Rg<CR>
 
 " ===== easymotion =====
