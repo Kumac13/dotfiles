@@ -96,7 +96,7 @@ set incsearch
 " Key Mapping
 inoremap <silent> jj <ESC>
 
-" Key Mapping for <Leader>
+" Key Mapping for Leader
 nnoremap <silent> <Leader>q :q<CR>
 nnoremap <silent> <Leader>w :w<CR>
 
@@ -186,6 +186,12 @@ let g:rustfmt_autosave = 1
 " ===== fzf.vim =====
 nnoremap <Leader>f :Files<CR>
 nnoremap <leader>rg :Rg<CR>
+nnoremap <leader>cmm :Commands<CR>
+nnoremap <leader>com :Commits<CR>
+nnoremap <leader>bc :BCommits<CR>
+nnoremap <leader>h :History:<CR>
+nnoremap <leader>b :Buffers:<CR>
+
 
 " ===== easymotion =====
 map <Leader> <Plug>(easymotion-prefix)
