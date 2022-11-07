@@ -147,6 +147,12 @@ let g:rustfmt_autosave = 1
 " ===== fzf.vim =====
 nnoremap <Leader>f :GFiles<CR>
 nnoremap <leader>rg :Rg<CR>
+nnoremap <leader>b :Buffers<CR>
+nnoremap <leader>c :Commits<CR>
+nnoremap <leader>bc :BCommits<CR>
+nnoremap <leader>cm :Commands<CR>
+nnoremap <leader>h :History:<CR>
+
 
 " ===== easymotion =====
 map <Leader> <Plug>(easymotion-prefix)
