@@ -87,6 +87,13 @@ autocmd BufWritePre * :%s/\s\+$//e
 set expandtab
 set shiftwidth=2
 set tabstop=2
+set autoindent
+set smartindent
+
+augroup fileTypeIndent
+  autocmd!
+  autocmd BufNewFile,BufRead *.java setlocal tabstop=4 shiftwidth=4
+augroup END
 
 " Search
 set hlsearch
