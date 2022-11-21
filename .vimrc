@@ -26,6 +26,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'mattn/vim-lsp-settings'
   Plug 'Shougo/ddc.vim'
   Plug 'shun/ddc-vim-lsp'
+  Plug 'Shougo/ddc-ui-native'
   Plug 'Shougo/ddc-around'
   Plug 'Shougo/ddc-matcher_head'
   Plug 'Shougo/ddc-sorter_rank'
@@ -351,6 +352,7 @@ augroup fmt
 augroup END
 
 "===== ddc =====
+call ddc#custom#patch_global('ui', 'native')
 call ddc#custom#patch_global('sources', ['vim-lsp','around', 'file'])
 call ddc#custom#patch_global('sourceOptions', {
        \ '_': {
