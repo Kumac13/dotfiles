@@ -88,6 +88,13 @@ autocmd BufWritePre * :%s/\s\+$//e
 set expandtab
 set shiftwidth=2
 set tabstop=2
+set autoindent
+set smartindent
+
+augroup fileTypeIndent
+  autocmd!
+  autocmd BufNewFile,BufRead *.java setlocal tabstop=4 shiftwidth=4
+augroup END
 
 " Search
 set hlsearch
@@ -96,7 +103,7 @@ set incsearch
 " Key Mapping
 inoremap <silent> jj <ESC>
 
-" Key Mapping for <Leader>
+" Key Mapping for Leader
 nnoremap <silent> <Leader>q :q<CR>
 nnoremap <silent> <Leader>w :w<CR>
 
@@ -153,7 +160,6 @@ nnoremap <leader>c :Commits<CR>
 nnoremap <leader>bc :BCommits<CR>
 nnoremap <leader>cm :Commands<CR>
 nnoremap <leader>h :History:<CR>
-
 
 " ===== easymotion =====
 map <Leader> <Plug>(easymotion-prefix)
@@ -386,14 +392,11 @@ inoremap <expr><S-TAB>  ddc#map#pum_visible() ? '<C-p>' : '<C-h>'
 " Use ddc.
 call ddc#enable()
 
-"==== WSL =====
-" WSL clipboard
-if !empty($WSL_DISTRO_NAME)
-  let s:clip = '/mnt/c/Windows/System32/clip.exe'
-  if executable(s:clip)
-    augroup WSLYan
-      autocmd
-      autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
-    augroup END
-  endif
+" WSL yank support
+let s:clip = '/mnt/c/Windows/System32/clip.exe'
+if executable(s:clip)
+  augroup WSLYank
+    autocmd!
+    autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
+  augroup END
 endif
