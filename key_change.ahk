@@ -3,24 +3,20 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-; HHKB like key mapping
-BS::\
-\::BS
-
 ; emacs like key mapping
-F13 & b::Left
-F13 & n::Down
-F13 & p::Up
-F13 & f::Right
-F13 & d::Del
-F13 & h::BS
-F13 & e::End
-F13 & a::Home
+F12 & b::Left
+F12 & n::Down
+F12 & p::Up
+F12 & f::Right
+F12 & d::Del
+F12 & h::BS
+F12 & e::End
+F12 & a::Home
 
 ; ctrl key mapping
-F13 & l::^l
-F13 & r::^r
-F13 & g::^g
-F13 & s::^s
-F13 & t::^t
-F13 & w::^w
+F12 & l::^l
+F12 & r::^r
+F12 & g::^g
+F12 & s::^s
+F12 & t::^t
+F12 & w::^w
