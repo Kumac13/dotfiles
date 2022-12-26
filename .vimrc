@@ -51,6 +51,7 @@ set splitbelow
 set wildmenu
 set showtabline=2
 set shortmess-=S
+set ambiwidth=double
 
 "===== Color =====
 set termguicolors
@@ -65,6 +66,7 @@ set laststatus=0
 set showcmd
 set ruler
 set clipboard+=unnamed
+set clipboard=unnamedplus
 set viminfofile=NONE
 
 "===== Preference =====
