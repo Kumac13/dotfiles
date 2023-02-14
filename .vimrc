@@ -402,3 +402,5 @@ if executable(s:clip)
     autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
   augroup END
 endif
+"===== vim-lsp =====
+let g:lsp_diagnostics_enabled = 0         " disable diagnostics support
