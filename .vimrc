@@ -21,6 +21,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'previm/previm'
   Plug 'pacha/vem-tabline'
   Plug 'thinca/vim-quickrun'
+  Plug 'haya14busa/vim-migemo'
   " lsp & ddc
   Plug 'prabirshrestha/vim-lsp'
   Plug 'mattn/vim-lsp-settings'
@@ -104,6 +105,7 @@ set incsearch
 
 " Key Mapping
 inoremap <silent> jj <ESC>
+nnoremap <Leader>m :Migemo<CR>
 
 " Key Mapping for Leader
 nnoremap <silent> <Leader>q :q<CR>
