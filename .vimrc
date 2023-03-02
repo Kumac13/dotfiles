@@ -33,6 +33,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'Shougo/ddc-sorter_rank'
   Plug 'Shougo/ddc-converter_remove_overlap'
   Plug 'Shougo/pum.vim'
+  Plug 'Shougo/ddc-ui-native'
   Plug 'LumaKernel/ddc-file'
   Plug 'vim-denops/denops.vim'
   Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
