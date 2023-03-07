@@ -1,4 +1,5 @@
 " vim-plugin
+
 call plug#begin('~/.vim/plugged')
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
@@ -67,8 +68,13 @@ colorscheme tokyonight
 set laststatus=0
 set showcmd
 set ruler
-set clipboard+=unnamed
-set clipboard=unnamedplus
+if !has('mac')
+  set clipboard+=unnamed
+  set clipboard=unnamedplus
+else
+  set clipboard+=unnamed
+endif
+
 set viminfofile=NONE
 
 "===== Preference =====
@@ -398,14 +404,15 @@ inoremap <expr><S-TAB>  ddc#map#pum_visible() ? '<C-p>' : '<C-h>'
 call ddc#enable()
 
 " WSL yank support
-let s:clip = '/mnt/c/Windows/System32/clip.exe'
-if executable(s:clip)
-  augroup WSLYank
-    autocmd!
-    autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
-  augroup END
+if !has('mac')
+  let s:clip = '/mnt/c/Windows/System32/clip.exe'
+  if executable(s:clip)
+    augroup WSLYank
+      autocmd!
+      autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
+    augroup END
+  endif
 endif
 
 "===== vim-lsp =====
 let g:lsp_diagnostics_enabled = 0         " disable diagnostics support
-
