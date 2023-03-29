@@ -409,3 +409,9 @@ endif
 "===== vim-lsp =====
 let g:lsp_diagnostics_enabled = 0         " disable diagnostics support
 
+"===== copilot =====
+let g:copilot_filetypes = {
+      \ 'gitcommit': v:true,
+      \ 'markdown': v:true,
+      \ 'yaml': v:true,
+      \ }
