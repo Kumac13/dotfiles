@@ -21,8 +21,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'LeafCage/vimhelpgenerator'
   Plug 'previm/previm'
   Plug 'pacha/vem-tabline'
-  Plug 'thinca/vim-quickrun'
+  Plug 'mattn/vim-chatgpt'
   Plug 'haya14busa/vim-migemo'
+  Plug 'github/copilot.vim'
   " lsp & ddc
   Plug 'prabirshrestha/vim-lsp'
   Plug 'mattn/vim-lsp-settings'
@@ -76,6 +77,7 @@ else
 endif
 
 set viminfofile=NONE
+set ff=unix
 
 "===== Preference =====
 " Encoding
