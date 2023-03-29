@@ -84,6 +84,7 @@ set ff=unix
 set encoding=utf-8
 set fenc=utf-8
 
+
 " File
 filetype on
 filetype plugin indent on
