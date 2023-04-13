@@ -418,7 +418,8 @@ if !has('mac')
 endif
 
 "===== vim-lsp =====
-let g:lsp_diagnostics_enabled = 0         " disable diagnostics support
+let g:lsp_diagnostics_enabled = 1         " disable diagnostics support
+let g:lsp_diagnostics_virtual_text_enabled = 0
 
 "===== copilot =====
 let g:copilot_filetypes = {
