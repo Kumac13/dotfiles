@@ -59,11 +59,9 @@ set ambiwidth=double
 
 "===== Color =====
 set termguicolors
-let g:tokyonight_style = 'night'
-let g:tokyonight_transparent_background = 1
-let g:lightline = {'colorscheme': 'tokyonight'}
-let g:tokyonight_disable_italic_comment = 1
 colorscheme tokyonight
+let g:tokyonight_disable_italic_comment = 1
+let g:lightline = {'colorscheme': 'tokyonight'}
 
 " others
 set laststatus=0
