@@ -24,5 +24,8 @@ rbenv init - fish | source
 status --is-interactive; and source (rbenv init -|psub)
 
 if uname -r | grep 'micro' >/dev/null
+  if status --is-interactive
+    status --is-command-substitution; or source (jenv init -|psub)
+  end
   cd $HOME
 end
