@@ -8,6 +8,7 @@ fish_vi_key_bindings
 alias prev="fzf --preview 'bat --style=numbers --color=always {}'"
 alias postgrestart='pg_ctl -D /usr/local/var/postgres start'
 alias wnt='cd ~/project/'
+alias vi='vim'
 
 # path
 # set RUBY_VERSION (ruby -v | sed 's/ruby ([0-9]\.[0-9]\.[0-9]).*/\1/')
@@ -22,4 +23,6 @@ eval (nodenv init - | source)
 rbenv init - fish | source
 status --is-interactive; and source (rbenv init -|psub)
 
-
+if uname -r | grep 'micro' >/dev/null
+  cd $HOME
+end
