@@ -22,8 +22,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'previm/previm'
   Plug 'pacha/vem-tabline'
   Plug 'mattn/vim-chatgpt'
-  Plug 'haya14busa/vim-migemo'
   Plug 'github/copilot.vim'
+  Plug 'lambdalisue/kensaku.vim'
+  Plug 'lambdalisue/kensaku-search.vim'
   " lsp & ddc
   Plug 'prabirshrestha/vim-lsp'
   Plug 'mattn/vim-lsp-settings'
@@ -114,7 +115,6 @@ set incsearch
 
 " Key Mapping
 inoremap <silent> jj <ESC>
-nnoremap <Leader>m :Migemo<CR>
 
 " Key Mapping for Leader
 nnoremap <silent> <Leader>q :q<CR>
@@ -446,3 +446,6 @@ let g:copilot_filetypes = {
   nmap T <Plug>(eft-T)
   xmap T <Plug>(eft-T)
   omap T <Plug>(eft-T)
+
+"==== kensaku-search =====
+cnoremap <CR> <Plug>(kensaku-search-replace)<CR>
