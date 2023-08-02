@@ -39,6 +39,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'LumaKernel/ddc-file'
   Plug 'vim-denops/denops.vim'
   Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
+  Plug 'hrsh7th/vim-eft'
 if has('nvim')
   Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -425,3 +426,23 @@ let g:copilot_filetypes = {
       \ 'markdown': v:true,
       \ 'yaml': v:true,
       \ }
+
+
+"===== vim-eft ======
+  nmap ; <Plug>(eft-repeat)
+  xmap ; <Plug>(eft-repeat)
+  omap ; <Plug>(eft-repeat)
+
+  nmap f <Plug>(eft-f)
+  xmap f <Plug>(eft-f)
+  omap f <Plug>(eft-f)
+  nmap F <Plug>(eft-F)
+  xmap F <Plug>(eft-F)
+  omap F <Plug>(eft-F)
+
+  nmap t <Plug>(eft-t)
+  xmap t <Plug>(eft-t)
+  omap t <Plug>(eft-t)
+  nmap T <Plug>(eft-T)
+  xmap T <Plug>(eft-T)
+  omap T <Plug>(eft-T)
