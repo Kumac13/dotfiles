@@ -41,6 +41,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-denops/denops.vim'
   Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
   Plug 'hrsh7th/vim-eft'
+  Plug 'thinca/vim-ambicmd'
 if has('nvim')
   Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -449,3 +450,7 @@ let g:copilot_filetypes = {
 
 "==== kensaku-search =====
 cnoremap <CR> <Plug>(kensaku-search-replace)<CR>
+
+"==== vim-ambicmd =====
+cnoremap <expr> <Space> ambicmd#expand("\<Space>")
+cnoremap <expr> <CR>    ambicmd#expand("\<CR>")
