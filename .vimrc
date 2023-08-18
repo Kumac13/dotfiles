@@ -350,7 +350,6 @@ function! s:split_type() abort
 endfunction
 
 "===== previm =====
-let g:previm_open_cmd = 'open -a Brave\ Browser'
 nnoremap <silent> <Leader>pr :PrevimOpen<CR>
 
 "===== git commit ====
