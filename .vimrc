@@ -42,6 +42,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
   Plug 'hrsh7th/vim-eft'
   Plug 'thinca/vim-ambicmd'
+  Plug 'gotchane/vim-git-commit-prefix'
 if has('nvim')
   Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 else
