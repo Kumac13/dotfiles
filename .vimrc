@@ -17,6 +17,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'kristijanhusak/defx-git'
   Plug 'tpope/vim-rails'
   Plug 'Kumac13/sfdx.vim'
+  Plug 'Kumac13/vimo.vim'
   Plug 'ejholmes/vim-forcedotcom' " user for syntax highlight and format
   Plug 'LeafCage/vimhelpgenerator'
   Plug 'previm/previm'
