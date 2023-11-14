@@ -454,3 +454,25 @@ cnoremap <CR> <Plug>(kensaku-search-replace)<CR>
 
 "==== vim-ambicmd =====
 cnoremap <expr> <Space> ambicmd#expand("\<Space>")
+
+"==== oepn relative path =====
+nnoremap <leader>o :call OpenRelativePath()<CR>
+
+function! OpenRelativePath()
+  let path = expand('<cfile>')
+
+  if !filereadable(path)
+    echo "File is not exist:".path
+    return
+  endif
+
+  for bufnr in range(1, bufnr('$'))
+    if bufname(bufnr) == path && buflisted(bufnr)
+      execute "buffer '.bufnr
+      return
+    endif
+  endfor
+
+  execute 'edit '.path
+endfunction
+
