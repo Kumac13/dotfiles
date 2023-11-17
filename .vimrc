@@ -12,7 +12,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'ghifarit53/tokyonight-vim'
   Plug 'ruanyl/vim-gh-line'
   Plug 'machakann/vim-sandwich'
-  Plug 'SirVer/ultisnips'
   Plug 'sheerun/vim-polyglot'
   Plug 'tpope/vim-rails'
   Plug 'Kumac13/sfdx.vim'
@@ -186,18 +185,6 @@ let g:EasyMotion_smartcase = 1
 
 map <Leader>j <Plug>(easymotion-w)
 map <Leader>k <Plug>(easymotion-b)
-
-"===== UtilSnips =====
-
-" Trigger configuration. You need to change this to something other than <tab> if you use one of the following:
-" - https://github.com/Valloric/YouCompleteMe
-" - https://github.com/nvim-lua/completion-nvim
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-n>"
-let g:UltiSnipsJumpBackwardTrigger="<c-p>"
-
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
 
 
 "===== URL paste =====
