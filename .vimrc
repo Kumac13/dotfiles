@@ -12,7 +12,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'ghifarit53/tokyonight-vim'
   Plug 'ruanyl/vim-gh-line'
   Plug 'machakann/vim-sandwich'
-  Plug 'sheerun/vim-polyglot'
   Plug 'tpope/vim-rails'
   Plug 'Kumac13/sfdx.vim'
   Plug 'Kumac13/vimo.vim'
@@ -42,7 +41,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'hrsh7th/vim-eft'
   Plug 'thinca/vim-ambicmd'
   Plug 'gotchane/vim-git-commit-prefix'
-
+  Plug 'lambdalisue/fern.vim'
 call plug#end()
 "===== Set =====
 set nonumber
@@ -186,6 +185,8 @@ let g:EasyMotion_smartcase = 1
 map <Leader>j <Plug>(easymotion-w)
 map <Leader>k <Plug>(easymotion-b)
 
+"===== Fern =====
+nnoremap <leader>n :Fern .
 
 "===== URL paste =====
 let s:clipboard_register = has('linux') || has('unix') ? '+' : '*'
@@ -260,7 +261,7 @@ nnoremap <buffer> <CR><CR> <Cmd>call <SID>select_type()<CR>
 "===== Prettier =====
 augroup fmt
   autocmd!
-  autocmd BufWrite *.cls,*.trigger,*.html,*.css PrettierAsync
+  autocmd BufWrite *.cls,*.trigger PrettierAsync
 augroup END
 
 "===== ddc =====
@@ -367,3 +368,5 @@ function! OpenRelativePath()
   execute 'edit '.path
 endfunction
 
+"==== vimo.vim =====
+nnoremap <leader>vm :VimoMonologue<CR>
