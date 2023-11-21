@@ -360,7 +360,7 @@ function! OpenRelativePath()
 
   for bufnr in range(1, bufnr('$'))
     if bufname(bufnr) == path && buflisted(bufnr)
-      execute "buffer '.bufnr
+      execute 'buffer '.bufnr
       return
     endif
   endfor
