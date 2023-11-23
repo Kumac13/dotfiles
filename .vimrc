@@ -176,7 +176,7 @@ map <Leader>j <Plug>(easymotion-w)
 map <Leader>k <Plug>(easymotion-b)
 
 "===== Fern =====
-nnoremap <leader>n :Fern .
+nnoremap <leader>d :Fern .<CR>
 
 "===== URL paste =====
 let s:clipboard_register = has('linux') || has('unix') ? '+' : '*'
