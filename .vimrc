@@ -6,23 +6,17 @@ call plug#begin('~/.vim/plugged')
   Plug 'arzg/vim-colors-xcode'
   Plug 'godlygeek/tabular'
   Plug 'tyru/open-browser.vim'
-  Plug 'rust-lang/rust.vim'
-  Plug 'mattn/emmet-vim'
   Plug 'easymotion/vim-easymotion'
   Plug 'ghifarit53/tokyonight-vim'
   Plug 'ruanyl/vim-gh-line'
   Plug 'machakann/vim-sandwich'
-  Plug 'tpope/vim-rails'
   Plug 'Kumac13/sfdx.vim'
   Plug 'Kumac13/vimo.vim'
   Plug 'ejholmes/vim-forcedotcom' " user for syntax highlight and format
   Plug 'LeafCage/vimhelpgenerator'
   Plug 'previm/previm'
   Plug 'pacha/vem-tabline'
-  Plug 'mattn/vim-chatgpt'
   Plug 'github/copilot.vim'
-  Plug 'lambdalisue/kensaku.vim'
-  Plug 'lambdalisue/kensaku-search.vim'
   " lsp & ddc
   Plug 'prabirshrestha/vim-lsp'
   Plug 'mattn/vim-lsp-settings'
@@ -39,7 +33,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-denops/denops.vim'
   Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
   Plug 'hrsh7th/vim-eft'
-  Plug 'thinca/vim-ambicmd'
   Plug 'gotchane/vim-git-commit-prefix'
   Plug 'lambdalisue/fern.vim'
 call plug#end()
@@ -76,7 +69,6 @@ set ff=unix
 " Encoding
 set encoding=utf-8
 set fenc=utf-8
-
 
 " File
 filetype on
@@ -145,10 +137,6 @@ let g:vim_markdown_new_list_item_indent=2
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_fenced_languages = ['csharp=cs'] " codeblockで別の言語を有効にする
 let g:vim_markdown_strikethrough = 1 " 取り消し線
-
-" ===== Ruby =====
-" Setting for solargrapo
-"let g:coc_global_extensions = ['coc-solargraph']
 
 function! s:check_back_space() abort
   let col = col('.') - 1
@@ -286,7 +274,6 @@ call ddc#custom#patch_global('sourceOptions', {
        \ }})
 
 " Mappings
-
 " <TAB>: completion.
 inoremap <silent><expr> <TAB>
 \ ddc#map#pum_visible() ? '<C-n>' :
@@ -314,14 +301,6 @@ endif
 let g:lsp_diagnostics_enabled = 1         " disable diagnostics support
 let g:lsp_diagnostics_virtual_text_enabled = 0
 
-"===== copilot =====
-let g:copilot_filetypes = {
-      \ 'gitcommit': v:true,
-      \ 'markdown': v:true,
-      \ 'yaml': v:true,
-      \ }
-
-
 "===== vim-eft ======
   nmap ; <Plug>(eft-repeat)
   xmap ; <Plug>(eft-repeat)
@@ -340,12 +319,6 @@ let g:copilot_filetypes = {
   nmap T <Plug>(eft-T)
   xmap T <Plug>(eft-T)
   omap T <Plug>(eft-T)
-
-"==== kensaku-search =====
-cnoremap <CR> <Plug>(kensaku-search-replace)<CR>
-
-"==== vim-ambicmd =====
-cnoremap <expr> <Space> ambicmd#expand("\<Space>")
 
 "==== oepn relative path =====
 nnoremap <leader>o :call OpenRelativePath()<CR>
