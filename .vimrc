@@ -44,6 +44,7 @@ set wildmenu
 set showtabline=2
 set shortmess-=S
 set ambiwidth=double
+set noswapfile
 
 "===== Color =====
 set termguicolors
