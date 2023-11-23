@@ -48,9 +48,10 @@ set noswapfile
 
 "===== Color =====
 set termguicolors
-colorscheme tokyonight
-let g:tokyonight_disable_italic_comment = 1
-let g:lightline = {'colorscheme': 'tokyonight'}
+colorscheme xcodedark
+"colorscheme tokyonight
+"let g:tokyonight_disable_italic_comment = 1
+"let g:lightline = {'colorscheme': 'tokyonight'}
 
 " others
 set laststatus=0
