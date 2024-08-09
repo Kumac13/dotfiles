@@ -36,3 +36,8 @@ set -x PGDATA /usr/local/var/postgres
 set -x PATH $HOME/go/bin $PATH
 set -x PATH $HOME/.cargo/bin $PATH
 set -x PATH $HOME/.deno/bin $PATH
+
+# To set up asdf, use below command
+# echo -e "\nsource "(brew --prefix asdf)"/libexec/asdf.fish" >> ~/.config/fish/config.fish
+# https://asdf-vm.com/ja-jp/guide/getting-started.html
+source /opt/homebrew/opt/asdf/libexec/asdf.fish
