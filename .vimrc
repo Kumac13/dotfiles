@@ -32,7 +32,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'LumaKernel/ddc-file'
   Plug 'vim-denops/denops.vim'
   Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
-  Plug 'hrsh7th/vim-eft'
   Plug 'gotchane/vim-git-commit-prefix'
   Plug 'lambdalisue/fern.vim'
 call plug#end()
@@ -302,25 +301,6 @@ endif
 "===== vim-lsp =====
 let g:lsp_diagnostics_enabled = 1         " disable diagnostics support
 let g:lsp_diagnostics_virtual_text_enabled = 0
-
-"===== vim-eft ======
-  nmap ; <Plug>(eft-repeat)
-  xmap ; <Plug>(eft-repeat)
-  omap ; <Plug>(eft-repeat)
-
-  nmap f <Plug>(eft-f)
-  xmap f <Plug>(eft-f)
-  omap f <Plug>(eft-f)
-  nmap F <Plug>(eft-F)
-  xmap F <Plug>(eft-F)
-  omap F <Plug>(eft-F)
-
-  nmap t <Plug>(eft-t)
-  xmap t <Plug>(eft-t)
-  omap t <Plug>(eft-t)
-  nmap T <Plug>(eft-T)
-  xmap T <Plug>(eft-T)
-  omap T <Plug>(eft-T)
 
 "==== oepn relative path =====
 nnoremap <leader>o :call OpenRelativePath()<CR>
