@@ -105,6 +105,7 @@ inoremap <silent> jj <ESC>
 " Key Mapping for Leader
 nnoremap <silent> <Leader>q :q<CR>
 nnoremap <silent> <Leader>w :w<CR>
+nnoremap <silent> <Leader>z <C-z>
 
 " Key Mapping for Insert Mode
 inoremap <C-a> <Home>
