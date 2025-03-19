@@ -207,15 +207,25 @@ function! s:open_term(cmd) abort
     let split = s:split_type()
 
     if has('nvim')
-      call execute(printf('%s new | terminal %s', split, a:cmd))
+        if split == 'bo'
+            echo "Creating bottom split"
+            execute 'bot new'
+        else
+            echo "Creating vertical split"
+            execute 'vnew'
+        endif
+
+        call termopen(a:cmd)
+
+        startinsert
     else
-      call execute(printf('%s term ++close %s', split, a:cmd))
+        call execute(printf('%s term ++close %s', split, a:cmd))
     endif
 
     setlocal bufhidden=delete
     setlocal noswapfile
     setlocal nobuflisted
-endfunction
+  endfunction
 
 function! s:split_type() abort
     " NOTE: my cell ratio: width:height == 1:2.1
