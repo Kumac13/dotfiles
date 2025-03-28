@@ -106,6 +106,7 @@ inoremap <silent> jj <ESC>
 nnoremap <silent> <Leader>q :q<CR>
 nnoremap <silent> <Leader>w :w<CR>
 nnoremap <silent> <Leader>z <C-z>
+nnoremap <silent> <Leader>rv :source $MYVIMRC<CR>
 
 " Key Mapping for Insert Mode
 inoremap <C-a> <Home>
@@ -223,9 +224,9 @@ function! s:open_term(cmd) abort
 endfunction
 
 function! s:split_type() abort
-    " NOTE: my cell ratio: width:height == 1:2.1
+    " NOTE: my cell ratio: width:height == 1:1.5
     let width = winwidth(win_getid())
-    let height = winheight(win_getid()) * 2.1
+    let height = winheight(win_getid()) * 1.5
 
     if height > width
         return 'bo'
@@ -327,3 +328,12 @@ endfunction
 
 "==== vimo.vim =====
 nnoremap <leader>vm :VimoMonologue<CR>
+
+"==== sfdx.vim =====
+nnoremap <Leader>sfd :SfdxDeploy<CR>
+nnoremap <Leader>sfr :SfdxRetrieve<CR>
+nnoremap <Leader>sfa :SfdxAlias<CR>
+nnoremap <Leader>sft :SfdxApexTestList<CR>
+nnoremap <Leader>sfe :SfdxApexExecuteMarkdownBlock<CR>
+nnoremap <Leader>sfq :SfdxSoqlExecuteMarkdownBlock<CR>
+nnoremap <Leader>sfl :SfdxSObjectList<CR>
