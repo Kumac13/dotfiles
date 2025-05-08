@@ -179,6 +179,7 @@ map <Leader>k <Plug>(easymotion-b)
 
 "===== Fern =====
 nnoremap <leader>d :Fern .<CR>
+let g:fern#default_hidden=1
 
 "===== URL paste =====
 let s:clipboard_register = has('linux') || has('unix') ? '+' : '*'
