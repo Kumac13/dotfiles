@@ -338,3 +338,8 @@ nnoremap <Leader>sft :SfdxApexTestList<CR>
 nnoremap <Leader>sfe :SfdxApexExecuteMarkdownBlock<CR>
 nnoremap <Leader>sfq :SfdxSoqlExecuteMarkdownBlock<CR>
 nnoremap <Leader>sfl :SfdxSObjectList<CR>
+
+"==== copilot.vim ====
+let g:copilot_filetypes = {
+      \ 'gitcommit': v:true,
+      \ }
