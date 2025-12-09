@@ -12,7 +12,7 @@ config.keys = {
     key = 't',
     mods = 'CMD',
     action = wezterm.action.SpawnCommandInNewTab {
-      args = { "/opt/homebrew/bin/tmux", "new-session" },
+      args = { "/opt/homebrew/bin/tmux", "new-session", "-A", "-s", "main" },
     },
   },
 }
