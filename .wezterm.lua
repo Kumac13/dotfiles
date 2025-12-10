@@ -12,7 +12,10 @@ config.keys = {
     key = 't',
     mods = 'CMD',
     action = wezterm.action.SpawnCommandInNewTab {
-      args = { "/opt/homebrew/bin/tmux", "new-session", "-A", "-s", "main" },
+      args = {
+        "/opt/homebrew/bin/fish", "-c",
+        "tmux has-session -t main 2>/dev/null && tmux new-window -t main -c ~ \\; attach -t main || tmux new-session -s main -c ~"
+      },
     },
   },
 }
